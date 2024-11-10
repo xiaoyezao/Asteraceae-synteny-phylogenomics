@@ -1,2 +1,2 @@
 # Asteraceae-synteny-phylogenomics
-pipeline for Asteraceae synteny phylogenomic analysis
+A pipeline for Asteraceae synteny phylogenomic analysis
