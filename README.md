@@ -17,3 +17,12 @@ A pipeline for Asteraceae synteny phylogenomic analysis
 from drimm-synteny, we get raw blocks, and we need to clean and sort the raw blcoks to
 1) split the all-in-one blocks (drimm-synteny output) into individual genomes
 2) meanwhile divide the blocks into separate ones based on ratio (normally from genome duplication, but segmental duplications cannot be distinguished, and are also processed)
+#### 4. with the results from step 3 (the final blocks), we can do:
+1) ancestral genome reconstruction (multi-genome analysis)
+   >a. with the outputs from step3, we can do ancestral chromosome reconstruction using IAGS
+   >
+   >b. different scenarios need to be considered based on the genome evolution history (duplication), and outgroup is very important
+2) chracterize genome rearrangements, there are two approaches:
+   >a. iags (fission, fusion), please follow iags guide; the output from step 3 can be used directly
+   >
+   >b. Grimm approach (fission, fusion, inversion, translocation)
