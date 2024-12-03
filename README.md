@@ -21,6 +21,8 @@ The objective of this pipeline is to apply the synteny-phylogenomic framework bu
 1) read in synOG table and adjust name
 #### 2. perform drimm-synteny to call synteny blocks
 1) process synOG table, call pairwise orthologs for given ref-target pair
+2) DRIMM-Synteny was designed to handle complex genomes [23], for example genomes with duplications followed by diploidization. In the case of the comparison of S. taccada and Asteraceae diploid genomes, single, duplicated and triplicated synteny blocks in Asteraceae diploid genomes were reconstructed. For further analysis, the triplicated blocks (>= 5 anchor genes) that are presumably derived from the ancient Asteraceae genome triplication were used. ![image](https://github.com/user-attachments/assets/7762b1ab-490b-4ae0-889a-bb08a57829b7)
+
 #### 3. process drimm raw blocks using processDrimm()
 from drimm-synteny, we get raw blocks, and we need to clean and sort the raw blcoks to
 1) split the all-in-one blocks (drimm-synteny output) into individual genomes
