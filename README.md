@@ -1,4 +1,4 @@
-## Asteraceae-synteny-phylogenomics
+# Asteraceae-synteny-phylogenomics
 A pipeline for Asteraceae synteny phylogenomic analysis
 >
 The objective of this pipeline is to apply the synteny-phylogenomic framework built in our xx paper to study Asteraceae genome evolution in context of ancient genome triplication
@@ -9,14 +9,14 @@ The objective of this pipeline is to apply the synteny-phylogenomic framework bu
 4. We can characterize the genome rearrangements from AGBs to focal Asteraceae genomes, and any other genome pairs as well
 5. we can quantify the gene fractionation in subgenomes 
 
-### Software Installation
+## Software Installation
 
 #### 1. set up an Linux version drimm-synteny <https://github.com/xjtu-omics/processDrimm/tree/master>
 1) install mono <conda install mono -c conda-forge>; this is required to compile and run drimm-synteny
 2) download the Program.cs, we used <mcs Program.cs -out:drimm-synteny> to compile a linux drimm-synteny; be noted that we can even modify the Program.cs to add a --help message
 3) run drimm-synteny on linux: mono drimm-synteny [4 arguements]
 
-### Quick Start
+## Quick Start
 #### 1. process synOG
 1) read in synOG table and adjust name
 #### 2. perform drimm-synteny to call synteny blocks
@@ -36,3 +36,7 @@ from drimm-synteny, we get raw blocks, and we need to clean and sort the raw blc
    >a. iags (fission, fusion), please follow iags guide; the output from step 3 can be used directly
    >
    >b. Grimm approach (fission, fusion, inversion, translocation)
+
+## TODOs
+
+## Citation
