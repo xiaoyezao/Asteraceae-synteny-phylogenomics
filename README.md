@@ -9,14 +9,34 @@ The objective of this pipeline is to apply the synteny-phylogenomic framework bu
 4. We can characterize the genome rearrangements from AGBs to focal Asteraceae genomes, and any other genome pairs as well
 5. we can quantify the gene fractionation in subgenomes 
 
-## Software Installation
+## Installation and Dependencies
+### The pipeline was designed using Python3; In addition, several other softwares are needed:
+[Mcscan](https://github.com/tanghaibao/jcvi/wiki/Mcscan-(python-version))
+>
+DRIMM-Synteny (available in the software folder)
+1) install mono <conda install mono -c conda-forge>; run <mono DRIMM-Synteny.exe [arguements]>; if this doesn't work, do the following steps:
+3) download the DRIMM-Synteny.cs, use mcs to compile DRIMM-Synteny: <mcs DRIMM-Synteny.cs -out:DRIMM-Synteny>;
+4) test DRIMM-Synteny: <mono DRIMM-Synteny --help>
+>
+[Genespace](https://github.com/jtlovell/GENESPACE)
 
-#### 1. set up an Linux version drimm-synteny <https://github.com/xjtu-omics/processDrimm/tree/master>
-1) install mono <conda install mono -c conda-forge>; this is required to compile and run drimm-synteny
-2) download the Program.cs, we used <mcs Program.cs -out:drimm-synteny> to compile a linux drimm-synteny; be noted that we can even modify the Program.cs to add a --help message
-3) run drimm-synteny on linux: mono drimm-synteny [4 arguements]
+## Usage
+#### 1. Input
+Please prepare the following input data:
+1) bed folder which contains all bed files
+2) pep folder which contains all proteome files
+3) index folder which contains all genome index files
+#### 2. Call homologous groups
+To call homology, orthofinder, mcscan and genespace can be used, however, currently we found that Genespace works best, here we will demo using Genespace.
+>
+`R
+library
+`
+#### 3. Run the pipeline
+The whole pipeline is organsed in several steps in jupty notebook. This requires that you have some knowledge of Python programming, however, this gives you a lot of freedom to modify the process as you like.
 
-## Quick Start
+
+## Output
 #### 1. process synOG
 1) read in synOG table and adjust name
 #### 2. perform drimm-synteny to call synteny blocks
