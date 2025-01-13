@@ -10,6 +10,11 @@ The objective of this pipeline is to apply the synteny-phylogenomic framework bu
 5. we can quantify the gene fractionation in subgenomes 
 
 ## Installation and Dependencies
+The pipeline is designed in Python3, no need to install, just download the package to your desired folder:
+```sh
+git clone https://github.com/xiaoyezao/Asteraceae-synteny-phylogenomics
+cd Asteraceae-synteny-phylogenomics
+```
 ### The pipeline was designed using Python3; In addition, several other softwares are needed:
 [Mcscan](https://github.com/tanghaibao/jcvi/wiki/Mcscan-(python-version))
 >
@@ -29,9 +34,10 @@ Please prepare the following input data:
 #### 2. Call homologous groups
 To call homology, orthofinder, mcscan and genespace can be used, however, currently we found that Genespace works best, here we will demo using Genespace.
 >
-`R
-library
-`
+```R
+library(genespace)
+```
+
 #### 3. Run the pipeline
 The whole pipeline is organsed in several steps in jupty notebook. This requires that you have some knowledge of Python programming, however, this gives you a lot of freedom to modify the process as you like.
 
