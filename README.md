@@ -1,4 +1,7 @@
 # Asteraceae-synteny-phylogenomics
+<img width="743" alt="Screenshot 2025-01-14 at 21 41 59" src="https://github.com/user-attachments/assets/b35bc922-0a56-41d3-b7f3-d93d1c773560" />
+
+## Introduction
 A pipeline for Asteraceae synteny phylogenomic analysis
 >
 The objective of this pipeline is to apply the synteny-phylogenomic framework built in our xx paper to study Asteraceae genome evolution in context of ancient genome triplication
