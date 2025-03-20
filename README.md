@@ -13,20 +13,30 @@ The objective of this pipeline is to apply the synteny-phylogenomic framework bu
 5. we can quantify the gene fractionation in subgenomes 
 
 ## Installation and Dependencies
-The pipeline is designed in Python3, no need to install, just download the package to your desired folder:
+### The pipeline is designed in Python3, and organised in [Jupyter Notebook](https://jupyter.org/). We have only tested it on Mac and Linux, but if all dependencies are available it should also work on Windows.
 ```sh
+# download the package to your desired folder
 git clone https://github.com/xiaoyezao/Asteraceae-synteny-phylogenomics
 cd Asteraceae-synteny-phylogenomics
 ```
-### The pipeline was designed using Python3; In addition, several other softwares are needed:
+### In addition, several other softwares are needed
 [Mcscan](https://github.com/tanghaibao/jcvi/wiki/Mcscan-(python-version))
 >
-DRIMM-Synteny (available in the software folder)
-1) install mono <conda install mono -c conda-forge>; run <mono DRIMM-Synteny.exe [arguements]>; if this doesn't work, do the following steps:
-3) download the DRIMM-Synteny.cs, use mcs to compile DRIMM-Synteny: <mcs DRIMM-Synteny.cs -out:DRIMM-Synteny>;
-4) test DRIMM-Synteny: <mono DRIMM-Synteny --help>
 >
 [Genespace](https://github.com/jtlovell/GENESPACE)
+>
+DRIMM-Synteny (a pre-built executable is available in the software folder)
+   ```sh
+   # install mono if you don't have it on your computer
+   conda install mono -c conda-forge
+   # test DRIMM-Synteny
+   mono DRIMM-Synteny.exe [arguements]
+   
+   #if this doesn't work, compile your own DRIMM-Synteny from DRIMM-Synteny.cs (available in the software folder)
+   mcs DRIMM-Synteny.cs -out:DRIMM-Synteny
+   # test
+   mono DRIMM-Synteny --help
+   ```
 
 ## Usage
 #### 1. Input
@@ -35,10 +45,36 @@ Please prepare the following input data:
 2) pep folder which contains all proteome files
 3) index folder which contains all genome index files
 #### 2. Call homologous groups
-To call homology, orthofinder, mcscan and genespace can be used, however, currently we found that Genespace works best, here we will demo using Genespace.
+To call homology, Orthofinder, Mcscan and GENESPACE can be used, however, currently we found that GENESPACE works best, here we will do a demo using GENESPACE.
 >
 ```R
 library(genespace)
+gpar <- init_genespace(
+  wd = output_dir,
+  genomeIDs = spec,
+  ploidy = ploi,
+  ignoreTheseGenomes = outgroup,
+  minPepLen = 30,
+  nCores = 48,
+  maxOgPlaces = 24,
+  orthofinderInBlk = FALSE,
+  path2mcscanx = "~/app/MCScanX-master/bin"
+  )
+
+gpar <- run_genespace(gsParam = gpar)
+
+pangenome <- query_pangenes(
+  gsParam,
+  bed = NULL,
+  refGenome = "AGB",
+  transform = TRUE,
+  showArrayMem = TRUE,
+  showNSOrtho = TRUE,
+  maxMem2Show = Inf,
+  showUnPlacedPgs = TRUE
+)
+
+fwrite(pangenome,file="pangenome_AGB_synOG.txt",quote = F, sep = "\t", na = NA)
 ```
 
 #### 3. Run the pipeline
