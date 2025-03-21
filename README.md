@@ -20,10 +20,22 @@ git clone https://github.com/xiaoyezao/Asteraceae-synteny-phylogenomics
 cd Asteraceae-synteny-phylogenomics
 ```
 ### In addition, several other softwares are needed
-[Mcscan](https://github.com/tanghaibao/jcvi/wiki/Mcscan-(python-version))
->
->
+
 [Genespace](https://github.com/jtlovell/GENESPACE)
+```sh
+# First, follow the instructions in Genespace official page to install; If you may encounter issues, try the following steps:
+conda create -n genespace
+conda activate genespace
+
+conda install -c bioconda orthofinder=2.5.5
+conda install bioconda::mcscanx
+
+conda install r-data.table r-dbscan r-R.utils r-devtools
+conda install bioconductor-Biostrings bioconductor-rtracklayer
+
+devtools::install_github("jtlovell/GENESPACE", upgrade = F)
+# if any R dependencies are still missing, try to install from conda
+```
 >
 DRIMM-Synteny (a pre-built executable is available in the software folder)
    ```sh
