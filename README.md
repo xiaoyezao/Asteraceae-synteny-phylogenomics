@@ -73,6 +73,10 @@ Please prepare the following input data:
 To call homology, Orthofinder, Mcscan and GENESPACE can be used, however, currently we found that GENESPACE works best, here we will do a demo using GENESPACE.
 >
 ```R
+
+wd <- "~/path/to/genespace/workingDirectory"
+path2mcscanx <- "~/path/to/MCScanX/"
+
 library(genespace)
 gpar <- init_genespace(
   wd = output_dir,
@@ -82,8 +86,7 @@ gpar <- init_genespace(
   minPepLen = 30,
   nCores = 48,
   maxOgPlaces = 24,
-  orthofinderInBlk = FALSE,
-  path2mcscanx = "~/app/MCScanX-master/bin"
+  orthofinderInBlk = FALSE
   )
 
 gpar <- run_genespace(gsParam = gpar)
