@@ -56,6 +56,19 @@ Please prepare the following input data:
 1) bed folder which contains all bed files
 2) pep folder which contains all proteome files
 3) index folder which contains all genome index files
+```sh
+/workingDirectory
+└─ peptide
+    └─ genome1.fa
+    └─ genome2.fa
+└─ bed
+    └─ genome1.bed
+    └─ genome2.bed
+└─ index
+    └─ genome1.index
+    └─ genome2.index
+
+```
 #### 2. Call homologous groups
 To call homology, Orthofinder, Mcscan and GENESPACE can be used, however, currently we found that GENESPACE works best, here we will do a demo using GENESPACE.
 >
