@@ -67,8 +67,9 @@ Prepare the genome data in your working directory, e.g.,`workingDirectory`:
 
 ```
 1) bed formatted coordinates of each gene (chr, start, end, name)
-2) peptide sequences in fasta format, where the header exactly matches the "name" (4th) bed column
-3) index of the genome assembly
+__I highly recommend to remove alternative splices by retaining only the longest one__
+3) peptide sequences in fasta format, where the header exactly matches the "name" (4th) bed column
+4) index of the genome assembly
 #### 2. Run the pipeline.
 Please refer to the `Asteraceae synteny-phylogenomics.ipynb` to run the pipeline step by step.
 1) we will use orthofinder and genespace to infer [hierarchical orthogroups](https://lab.dessimoz.org/blog/2016/12/08/what-hogs-are) and anchor genes which will be used for synteny segment reconstruction in next step. 
