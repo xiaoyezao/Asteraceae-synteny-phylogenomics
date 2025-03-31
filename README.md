@@ -66,45 +66,13 @@ Prepare the genome data in your working directory, e.g.,`workingDirectory`:
     └─ genome2.index
 
 ```
-1) bed folder which contains all bed files
-2) pep folder which contains all proteome files
-3) index folder which contains all genome index files
+1) bed formatted coordinates of each gene (chr, start, end, name)
+2) peptide sequences in fasta format, where the header exactly matches the "name" (4th) bed column
+3) index of the genome assembly
 #### 2. Run the pipeline.
-Please refer to the `Asteraceae synteny-phylogenomics.ipynb` to run the pipeline
-To call homology, Orthofinder, Mcscan and GENESPACE can be used, however, currently we found that GENESPACE works best, here we will do a demo using GENESPACE.
->
-```R
+Please refer to the `Asteraceae synteny-phylogenomics.ipynb` to run the pipeline step by step.
+1) we will use orthofinder and genespace to infer [hierarchical orthogroups](https://lab.dessimoz.org/blog/2016/12/08/what-hogs-are)
 
-wd <- "~/path/to/genespace/workingDirectory"
-path2mcscanx <- "~/path/to/MCScanX/"
-
-library(genespace)
-gpar <- init_genespace(
-  wd = output_dir,
-  genomeIDs = spec,
-  ploidy = ploi,
-  ignoreTheseGenomes = outgroup,
-  minPepLen = 30,
-  nCores = 48,
-  maxOgPlaces = 24,
-  orthofinderInBlk = FALSE
-  )
-
-gpar <- run_genespace(gsParam = gpar)
-
-pangenome <- query_pangenes(
-  gsParam,
-  bed = NULL,
-  refGenome = "AGB",
-  transform = TRUE,
-  showArrayMem = TRUE,
-  showNSOrtho = TRUE,
-  maxMem2Show = Inf,
-  showUnPlacedPgs = TRUE
-)
-
-fwrite(pangenome,file="pangenome_AGB_synOG.txt",quote = F, sep = "\t", na = NA)
-```
 
 #### 3. Run the pipeline
 The whole pipeline is organsed in several steps in jupty notebook. This requires that you have some knowledge of Python programming, however, this gives you a lot of freedom to modify the process as you like.
