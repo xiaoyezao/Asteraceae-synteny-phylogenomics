@@ -2,12 +2,12 @@
 <img width="743" alt="Screenshot 2025-01-14 at 21 41 59" src="https://github.com/user-attachments/assets/b35bc922-0a56-41d3-b7f3-d93d1c773560" />
 
 ## Introduction
-A pipeline for Asteraceae synteny-phylogenomic analysis
+__A pipeline for Asteraceae synteny-phylogenomic analysis__
 >
 The objective of this pipeline is to apply the synteny-phylogenomic framework built in our [paper](https://www.biorxiv.org/content/10.1101/2025.01.08.631874v1) to study Asteraceae genome evolution in context of ancient genome triplication.
 >
 1. we use Genespace or Mcscan to map genomes onto the 15*3 Asteraceae Genome Blocks (AGB) that generated based on the comparasion of an diploid outgroup and the paleohexaploid ingroup, from which we obtained syntenic genes as anchors
-2. we use the anchors and drimm-synteny to scan the genomes to identify conserved synteny segments
+2. we use the anchors and drimm-synteny to scan the genomes to identify syntenic segments
 3. with the synteny segments recovered, we can represent any Asteraceae genomes using the 15*3 AGB system
 4. we can characterize the genome rearrangements from AGBs to focal Asteraceae genomes, and any other genome pairs as well
 5. we can quantify the gene fractionation in subgenomes 
@@ -21,7 +21,7 @@ cd Asteraceae-synteny-phylogenomics
 ```
 ### In addition, several other softwares are needed
 
-[Genespace](https://github.com/xiaoyezao/GENESPACE)
+[__Genespace__](https://github.com/xiaoyezao/GENESPACE)
 ```sh
 # I recommend making a new environment and install all softwares and library dependencies in the same Conda environment.
 conda create -n AGB
@@ -37,7 +37,7 @@ devtools::install_github("xiaoyezao/GENESPACE", upgrade = F)
 # if any R dependencies are still missing, try to install from Conda
 ```
 >
-DRIMM-Synteny (a pre-built executable is available in the software folder)
+__DRIMM-Synteny__ (a pre-built executable is available in the software folder)
    ```sh
    # install mono if you don't have it on your computer
    conda install mono -c conda-forge
