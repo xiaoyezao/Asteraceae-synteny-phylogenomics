@@ -71,7 +71,7 @@ Prepare the genome data in your working directory, e.g.,`workingDirectory`:
 3) index of the genome assembly
 #### 2. Run the pipeline.
 Please refer to the `Asteraceae synteny-phylogenomics.ipynb` to run the pipeline step by step.
-1) we will use orthofinder and genespace to infer [hierarchical orthogroups](https://lab.dessimoz.org/blog/2016/12/08/what-hogs-are)
+1) we will use orthofinder and genespace to infer [hierarchical orthogroups](https://lab.dessimoz.org/blog/2016/12/08/what-hogs-are) and anchor genes which will be used for synteny segment reconstruction in next step. 
 
 
 #### 3. Run the pipeline
