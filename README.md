@@ -51,10 +51,7 @@ __DRIMM-Synteny__ (a pre-built executable is available in the software folder)
 
 ## Usage
 #### 1. Input
-Prepare a folder, e.g.,`workingDirectory`, and the following input data:
-1) bed folder which contains all bed files
-2) pep folder which contains all proteome files
-3) index folder which contains all genome index files
+Prepare the genome data in your working directory, e.g.,`workingDirectory`:
 ```sh
 /workingDirectory
 └─ meta.txt
@@ -69,7 +66,11 @@ Prepare a folder, e.g.,`workingDirectory`, and the following input data:
     └─ genome2.index
 
 ```
-#### 2. Call homologous groups
+1) bed folder which contains all bed files
+2) pep folder which contains all proteome files
+3) index folder which contains all genome index files
+#### 2. Run the pipeline.
+Please refer to the `Asteraceae synteny-phylogenomics.ipynb` to run the pipeline
 To call homology, Orthofinder, Mcscan and GENESPACE can be used, however, currently we found that GENESPACE works best, here we will do a demo using GENESPACE.
 >
 ```R
