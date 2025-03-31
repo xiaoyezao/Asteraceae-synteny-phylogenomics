@@ -17,7 +17,6 @@ The objective of this pipeline is to apply the synteny-phylogenomic framework bu
 ```sh
 # download the package to your desired folder
 git clone https://github.com/xiaoyezao/Asteraceae-synteny-phylogenomics
-cd Asteraceae-synteny-phylogenomics
 ```
 ### In addition, several other softwares are needed
 
@@ -52,12 +51,13 @@ __DRIMM-Synteny__ (a pre-built executable is available in the software folder)
 
 ## Usage
 #### 1. Input
-Please prepare the following input data:
+Prepare a folder, e.g.,`workingDirectory`, and the following input data:
 1) bed folder which contains all bed files
 2) pep folder which contains all proteome files
 3) index folder which contains all genome index files
 ```sh
 /workingDirectory
+└─ meta.txt
 └─ peptide
     └─ genome1.fa
     └─ genome2.fa
