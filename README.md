@@ -26,11 +26,11 @@ git clone https://github.com/xiaoyezao/Asteraceae-synteny-phylogenomics
 conda create -n AGB
 conda activate AGB
 
-conda install -c bioconda orthofinder=2.5.5
+conda install bioconda::orthofinder=2.5.5
 conda install bioconda::mcscanx
 
 conda install r-data.table r-dbscan r-R.utils r-devtools
-conda install bioconductor-Biostrings bioconductor-rtracklayer
+conda install -c bioconda bioconductor-Biostrings bioconductor-rtracklayer
 
 devtools::install_github("xiaoyezao/GENESPACE", upgrade = F)
 # if any R dependencies are still missing, try to install from Conda
