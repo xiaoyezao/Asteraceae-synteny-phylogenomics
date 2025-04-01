@@ -48,10 +48,13 @@ __DRIMM-Synteny__ (a pre-built executable is available in the software folder)
    # test
    mono DRIMM-Synteny --help
    ```
-__[ipykernel](https://github.com/ipython/ipykernel)__
+__[ipykernel](https://github.com/ipython/ipykernel) and python libraries__
 ```sh
 # to be able to run the pipeline in Jupyter Notebook, ipykernel is needed
 conda install conda-forge::ipykernel
+
+# several python libraries are also needed
+conda install conda-forge::pandas
 ```
 ## Usage
 #### 1. Input
