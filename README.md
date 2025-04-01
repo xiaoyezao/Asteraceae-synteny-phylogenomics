@@ -48,7 +48,11 @@ __DRIMM-Synteny__ (a pre-built executable is available in the software folder)
    # test
    mono DRIMM-Synteny --help
    ```
-
+__[ipykernel](https://github.com/ipython/ipykernel)__
+```sh
+# to be able to run the pipeline in Jupyter Notebook, ipykernel is needed
+conda install conda-forge::ipykernel
+```
 ## Usage
 #### 1. Input
 Prepare the genome data in your working directory, e.g.,`workingDirectory`:
