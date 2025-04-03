@@ -44,7 +44,7 @@ __DRIMM-Synteny__ (a pre-built executable is available in the software folder)
    mono DRIMM-Synteny.exe [arguements]
    
    #if this doesn't work, compile your own DRIMM-Synteny from DRIMM-Synteny.cs (available in the software folder)
-   mcs DRIMM-Synteny.cs -out:DRIMM-Synteny
+   mcs DRIMM-Synteny.cs -out:DRIMM-Synteny.exe
    # test
    mono DRIMM-Synteny --help
    ```
