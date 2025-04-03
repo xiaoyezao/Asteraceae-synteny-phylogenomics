@@ -36,19 +36,18 @@ devtools::install_github("xiaoyezao/GENESPACE", upgrade = F)
 # if any R dependencies are still missing, try to install from Conda
 ```
 >
-__DRIMM-Synteny__ (a pre-built executable is available in the software folder)
+__DRIMM-Synteny__
    ```sh
    # install mono if you don't have it on your computer
    conda install mono -c conda-forge
-   # test DRIMM-Synteny
-   mono DRIMM-Synteny.exe [arguements]
    
-   #if this doesn't work, compile your own DRIMM-Synteny from DRIMM-Synteny.cs (available in the software folder)
-   mcs DRIMM-Synteny.cs -out:DRIMM-Synteny.exe
-   # test
-   mono DRIMM-Synteny --help
+   # enter the software subfolder of the package where you can find "DRIMM-Synteny.cs", and compile DRIMM-Synteny from source
+   mcs DRIMM-Synteny.cs -out:DRIMM-Synteny
+
+   # check if DRIMM-Synteny is compiled successfully
+   mono DRIMM-Synteny -h
    ```
-__[ipykernel](https://github.com/ipython/ipykernel) and python libraries__
+__In addition, if you want to run the pipeline step by step, you will need [ipykernel](https://github.com/ipython/ipykernel) and python libraries__
 ```sh
 # to be able to run the pipeline in Jupyter Notebook, ipykernel is needed
 conda install conda-forge::ipykernel
