@@ -4,7 +4,7 @@
 ## Introduction
 __A pipeline for Asteraceae synteny-phylogenomic analysis__
 >
-The objective of this pipeline is to apply the synteny-phylogenomic framework built in our [paper](https://www.biorxiv.org/content/10.1101/2025.01.08.631874v1) to study Asteraceae genome evolution in context of ancient genome triplication.
+The objective of this pipeline is to apply the synteny-phylogenomic framework built in our [preprint](https://www.biorxiv.org/content/10.1101/2025.01.08.631874v1) to study Asteraceae genome evolution in context of ancient genome triplication.
 >
 1. we use Genespace or Mcscan to map genomes onto the 15*3 Asteraceae Genome Blocks (AGB) that generated based on the comparasion of an diploid outgroup and the paleohexaploid ingroup, from which we obtained syntenic genes as anchors
 2. we use the anchors and drimm-synteny to scan the genomes to reconstruct syntenic segments
@@ -137,3 +137,11 @@ Please refer to the `Asteraceae synteny-phylogenomics.ipynb` to run the pipeline
    >
    >b. Grimm approach (fission, fusion, inversion, translocation)
 ## Citation
+Feng et al. Phylogenomic synteny analysis tracks conserved ancient polyploid-derived triplicated genomic blocks across Asteraceae genomes. bioRxiv 2025. https://doi.org/10.1101/2025.01.08.631874
+>
+The pipeline relays on several softwares:
+>
+John T Lovell, et al. (2022). GENESPACE tracks regions of interest and gene copy number variation across multiple genomes. eLife, 11:e78526.
+>
+Pham SK and Pevzner PA (2010). DRIMM-Synteny: decomposing genomes into evolutionary conserved segments. Bioinformatics 26, 2509–2516.
+
