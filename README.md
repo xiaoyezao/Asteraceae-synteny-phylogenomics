@@ -137,7 +137,7 @@ Please refer to the `Asteraceae synteny-phylogenomics.ipynb` to run the pipeline
    >
    >b. Grimm approach (fission, fusion, inversion, translocation)
 ## Citation
-Feng et al. Phylogenomic synteny analysis tracks conserved ancient polyploid-derived triplicated genomic blocks across Asteraceae genomes. bioRxiv 2025. https://doi.org/10.1101/2025.01.08.631874
+Feng et al.(2025). Phylogenomic synteny analysis tracks conserved ancient polyploid-derived triplicated genomic blocks across Asteraceae genomes. bioRxiv. https://doi.org/10.1101/2025.01.08.631874
 >
 The pipeline relays on several softwares:
 >
