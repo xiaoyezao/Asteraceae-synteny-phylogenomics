@@ -4,7 +4,7 @@
 ## Introduction
 __A pipeline for Asteraceae synteny-phylogenomic analysis__
 >
-The objective of this pipeline is to apply the synteny-phylogenomic framework built in our [PANS paper](https://doi.org/10.1073/pnas.2426851123) to study Asteraceae genome evolution in context of ancient genome triplication.
+The objective of this pipeline is to apply the synteny-phylogenomic framework built in our [PNAS paper](https://doi.org/10.1073/pnas.2426851123) to study Asteraceae genome evolution in context of ancient genome triplication.
 >
 1. we use Genespace or Mcscan to map genomes onto the 15*3 Asteraceae Genome Blocks (AGB) that generated based on the comparasion of an diploid outgroup and the paleohexaploid ingroup, from which we obtained syntenic genes as anchors
 2. we use the anchors and drimm-synteny to scan the genomes to reconstruct syntenic segments
