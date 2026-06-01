@@ -13,7 +13,7 @@ The objective of this pipeline is to apply the synteny-phylogenomic framework bu
 5. we can quantify the gene fractionation in subgenomes 
 
 ## Installation and Dependencies
-### The pipeline is designed in Python3, and organised in [Jupyter Notebook](https://jupyter.org/). We have only tested it on Mac and Linux, but if all dependencies are available it should also work on Windows.
+### The pipeline is designed in Python3 (python 3.9), and organised in [Jupyter Notebook](https://jupyter.org/). We have only tested it on Mac and Linux, but if all dependencies are available it should also work on Windows.
 ```sh
 # download the package to your desired folder
 git clone https://github.com/xiaoyezao/Asteraceae-synteny-phylogenomics
@@ -139,7 +139,7 @@ Please refer to the `Asteraceae synteny-phylogenomics.ipynb` to run the pipeline
 ## Citation
 Feng et al.(2025). Phylogenomic synteny analysis tracks conserved ancient polyploid-derived triplicated genomic blocks across Asteraceae genomes. bioRxiv. https://doi.org/10.1101/2025.01.08.631874
 >
-The pipeline relays on several softwares:
+The pipeline relies on several softwares:
 >
 John T Lovell, et al. (2022). GENESPACE tracks regions of interest and gene copy number variation across multiple genomes. eLife, 11:e78526.
 >
